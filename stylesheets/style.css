@@ -39,20 +39,23 @@ a {
 
 .main-content {
   flex: 1 1 auto;
-}
-
-.thumb-item + .thumb-item {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .thumb-item {
   display: inline-block;
-  width: 120px;
+  min-width: 120px;
+  max-width: 120px;
   border: 1px solid rgb(100%, 100%, 100%);
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
 
 .thumb-list {
+  flex: 0 1 auto;
+  order: 2;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   white-space: nowrap;
@@ -71,6 +74,18 @@ a {
   font-size: 18px;
   margin: 0;
   padding: 4px 10px;
+}
+
+.selected-image-container {
+flex: 1 1 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.selected-image-frame {
+  text-align: center;
 }
 
 .selected-image {
