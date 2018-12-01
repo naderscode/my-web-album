@@ -10,13 +10,23 @@
 
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  background: rgb(149, 194, 215);
+  display: flex;
+  flex-direction: column;
   font-size: 10px;
+  background: rgb(85, 130, 85);
 }
 
 a {
   text-decoration: none;
+}
+
+.main-header {
+  flex: 0 1 auto;
 }
 
 .logo-text {
@@ -27,11 +37,17 @@ a {
   text-transform: uppercase;
 }
 
+.main-content {
+  flex: 1 1 auto;
+}
+
 .thumb-item + .thumb-item {
   margin-top: 10px;
 }
 
 .thumb-item {
+  display: inline-block;
+  width: 120px;
   border: 1px solid rgb(100%, 100%, 100%);
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
@@ -39,6 +55,8 @@ a {
 .thumb-list {
   list-style: none;
   padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .thumb-image {
@@ -53,4 +71,8 @@ a {
   font-size: 18px;
   margin: 0;
   padding: 4px 10px;
+}
+
+.selected-image {
+  width: 90%;
 }
