@@ -7,7 +7,17 @@
   url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
   font-weight: normal;
   font-style: normal;
+}
 
+@font-face {
+  font-family: 'airstreamregular';
+  src: url('fonts/Airstream-webfont.eot');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Airstream-webfont.woff') format('woff'),
+       url('fonts/Airstream-webfont.ttf') format('truetype'),
+       url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
@@ -85,9 +95,20 @@ align-items: center;
 }
 
 .selected-image-frame {
+  position: relative;
   text-align: center;
 }
 
 .selected-image {
   width: 90%;
+}
+
+.selected-image-title {
+  position: absolute;
+  bottom: -16px;
+  left: 4px;
+  color: white;
+  text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+  font-family: airstreamregular;
+  font-size: 40px;
 }
