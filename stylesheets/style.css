@@ -112,3 +112,24 @@ align-items: center;
   font-family: airstreamregular;
   font-size: 40px;
 }
+
+@media all and (min-width: 768px){
+  .main-content {
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+  .thumb-list {
+    flex-direction: column;
+    order: 0;
+    margin-left: 20px;
+  }
+
+    .thumb-item {
+      max-width: 260px;
+  }
+
+    .thumb-item + .thumb-item {
+      margin-top: 20px;
+  }
+}
