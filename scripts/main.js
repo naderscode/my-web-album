@@ -4,7 +4,7 @@ var SELECTED_IMAGE_LINK = '[data-image-role="trigger"]';
 
 function setSelectedImage(imgUrl, titleTxt) {
   'use strict';
-  
+
   var selectedImage = document.querySelector(SELECTED_IMAGE);
   selectedImage.setAttribute('src', imgUrl);
 
