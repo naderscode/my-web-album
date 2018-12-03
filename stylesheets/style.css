@@ -112,6 +112,19 @@ a {
   font-size: 40px;
 }
 
+.selected-hidden .selected-image-container {
+  display: none;
+}
+
+.selected-hidden .thumb-list {
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-hidden .thumb-item {
+  max-width: 80%;
+}
+
 @media all and (min-width: 768px) {
   .main-content {
     flex-direction: row;

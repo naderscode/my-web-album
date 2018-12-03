@@ -1,6 +1,8 @@
 var SELECTED_IMAGE = '[data-image-role="target"]';
 var SELECTED_IMAGE_TITLE = '[data-image-role="title"]';
 var SELECTED_IMAGE_LINK = '[data-image-role="trigger"]';
+var SELECTED_HIDDEN_CLASS = 'selected-hidden';
+var ESC_KEY = 27;
 
 function setSelectedImage(imgUrl, titleTxt) {
   'use strict';
@@ -32,6 +34,7 @@ function addThumbClickHandler(thumbnail) {
   thumbnail.addEventListener('click', function(event) {
     event.preventDefault();
     setSelectedImageFromThumb(thumbnail);
+    showSelected();
   });
 }
 
@@ -42,10 +45,32 @@ function getThumbnailsArray() {
   return thumbnailArray;
 }
 
+function hideSelected() {
+  'use strict';
+  document.body.classList.add(SELECTED_HIDDEN_CLASS);
+}
+
+function showSelected() {
+  'use strict';
+  document.body.classList.remove(SELECTED_HIDDEN_CLASS);
+}
+
+function addKeyPressHandler() {
+  'use strict';
+  document.body.addEventListener('keyup', function(event){
+    event.preventDefault();
+    console.log(event.keyCode);
+    if (event.keyCode === ESC_KEY){
+      hideSelected();
+    }
+  });
+}
+
 function initializeEvents() {
   'use strict';
   var thumbnails = getThumbnailsArray();
   thumbnails.forEach(addThumbClickHandler);
+  addKeyPressHandler();
 }
 
 initializeEvents();
