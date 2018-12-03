@@ -102,7 +102,7 @@ a {
 .selected-image-frame {
   position: relative;
   text-align: center;
-  transition: transform 333ms cubic-bezier(1,.06,.28,1)
+  transition: transform 333ms cubic-bezier(1, .06, .28, 1)
 }
 
 .is-small {

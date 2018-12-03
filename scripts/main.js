@@ -57,17 +57,17 @@ function showSelected() {
   var frame = document.querySelector(SELECTED_IMAGE_FRAME);
   document.body.classList.remove(SELECTED_HIDDEN_CLASS);
   frame.classList.add(SMALL_EFFECT_CLASS);
-  setTimeout(function(){
+  setTimeout(function() {
     frame.classList.remove(SMALL_EFFECT_CLASS);
-  }, 50);  
+  }, 50);
 }
 
 function addKeyPressHandler() {
   'use strict';
-  document.body.addEventListener('keyup', function(event){
+  document.body.addEventListener('keyup', function(event) {
     event.preventDefault();
-    console.log(event.keyCode);
-    if (event.keyCode === ESC_KEY){
+    //console.log(event.keyCode);
+    if (event.keyCode === ESC_KEY) {
       hideSelected();
     }
   });
