@@ -1,7 +1,9 @@
 var SELECTED_IMAGE = '[data-image-role="target"]';
 var SELECTED_IMAGE_TITLE = '[data-image-role="title"]';
 var SELECTED_IMAGE_LINK = '[data-image-role="trigger"]';
+var SELECTED_IMAGE_FRAME = '[data-image-role="frame"]';
 var SELECTED_HIDDEN_CLASS = 'selected-hidden';
+var SMALL_EFFECT_CLASS = 'is-small';
 var ESC_KEY = 27;
 
 function setSelectedImage(imgUrl, titleTxt) {
@@ -52,7 +54,12 @@ function hideSelected() {
 
 function showSelected() {
   'use strict';
+  var frame = document.querySelector(SELECTED_IMAGE_FRAME);
   document.body.classList.remove(SELECTED_HIDDEN_CLASS);
+  frame.classList.add(SMALL_EFFECT_CLASS);
+  setTimeout(function(){
+    frame.classList.remove(SMALL_EFFECT_CLASS);
+  }, 50);  
 }
 
 function addKeyPressHandler() {
